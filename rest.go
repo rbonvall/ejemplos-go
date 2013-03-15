@@ -1,5 +1,5 @@
 // go run rest.go
-// open localhost:8787 in browser
+// open localhost:8787/api/number in browser
 
 package main
 
