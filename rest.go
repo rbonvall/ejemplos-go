@@ -13,7 +13,6 @@ func main() {
     gorest.RegisterService(new(TestService))
     http.Handle("/", gorest.Handle())
     http.ListenAndServe(":8787", nil)
-    
 }
 
 type TestService struct {
@@ -25,8 +24,8 @@ type TestService struct {
 
     // End-point level configuration
     number gorest.EndPoint `method:"GET"
-                         path:"/number/"
-                         output:"int"`
+                            path:"/number/"
+                            output:"int"`
 }
 
 func (s TestService) Number() int {
