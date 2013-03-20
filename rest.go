@@ -15,6 +15,11 @@ func main() {
     http.ListenAndServe(":8787", nil)
 }
 
+type Person struct {
+    given_name string
+    family_name string
+}
+
 type TestService struct {
 
     // Service level configuration
@@ -23,11 +28,25 @@ type TestService struct {
                         produces:"application/json"`
 
     // End-point level configuration
-    number gorest.EndPoint `method:"GET"
-                            path:"/number/"
-                            output:"int"`
+    getNumber gorest.EndPoint `method:"GET"
+                               path:"/number/"
+                               output:"int"`
+    getNumbers gorest.EndPoint `method:"GET"
+                                path:"/numbers/"
+                                output:"[]int"`
+    getPerson gorest.EndPoint `method:"GET"
+                               path:"/person/"
+                               output:"Person"`
 }
 
-func (s TestService) Number() int {
+func (s TestService) GetNumber() int {
     return 1
+}
+
+func (s TestService) GetNumbers() []int {
+    return []int{1, 2, 3, 4, 5}
+}
+
+func (s TestService) GetPerson() Person {
+    return Person{"Perico", "Los Palotes"}
 }
