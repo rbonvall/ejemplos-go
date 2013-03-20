@@ -16,8 +16,8 @@ func main() {
 }
 
 type Person struct {
-    given_name string
-    family_name string
+    Given_name string
+    Family_name string
 }
 
 type TestService struct {
