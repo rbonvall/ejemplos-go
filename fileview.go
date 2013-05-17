@@ -85,9 +85,9 @@ func show_help() {
 	print_at(col,  9, "j ↓", fg)
 	print_at(col, 10, "k ↑", fg)
 	print_at(col, 11, "l →", fg)
-	print_at(col, 12, "g ↑↑", fg)
-	print_at(col, 13, "G ↓↓", fg)
-	print_at(col, 14, "G ←←", fg)
+	print_at(col, 12, "g ↟", fg)
+	print_at(col, 13, "G ↡", fg)
+	print_at(col, 14, "G ↞", fg)
 	print_at(col, 15, "q ☠", fg)
 }
 
