@@ -87,7 +87,8 @@ func show_help() {
 	print_at(col, 11, "l →", fg)
 	print_at(col, 12, "g ↑↑", fg)
 	print_at(col, 13, "G ↓↓", fg)
-	print_at(col, 14, "q ☠", fg)
+	print_at(col, 14, "G ←←", fg)
+	print_at(col, 15, "q ☠", fg)
 }
 
 func main() {
@@ -144,6 +145,8 @@ loop:	for {
 				row = 0
 			case 'G':
 				row = len(contents) - H
+			case '0':
+				col = 0
 			case 'q':
 				break loop
 			}
