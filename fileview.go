@@ -73,7 +73,7 @@ func show_text(text []string, first_line, first_column int) {
 
 func print_at(j, i int, s string, fg termbox.Attribute) {
 	for c, r := range s {
-			termbox.SetCell(j + c, i, r, fg, termbox.ColorDefault)
+		termbox.SetCell(j + c, i, r, fg, termbox.ColorDefault)
 	}
 }
 
@@ -81,14 +81,14 @@ func print_at(j, i int, s string, fg termbox.Attribute) {
 func show_help() {
 	fg := termbox.ColorRed
 	col := W + 5
-	print_at(col,  8, "h ←", fg)
-	print_at(col,  9, "j ↓", fg)
-	print_at(col, 10, "k ↑", fg)
-	print_at(col, 11, "l →", fg)
-	print_at(col, 12, "g ↟", fg)
-	print_at(col, 13, "G ↡", fg)
-	print_at(col, 14, "G ↞", fg)
-	print_at(col, 15, "q ☠", fg)
+	print_at(col, 2, "h ←", fg)
+	print_at(col, 3, "j ↓", fg)
+	print_at(col, 4, "k ↑", fg)
+	print_at(col, 5, "l →", fg)
+	print_at(col, 6, "g ↟", fg)
+	print_at(col, 7, "G ↡", fg)
+	print_at(col, 8, "0 ↞", fg)
+	print_at(col, 9, "q ☠", fg)
 }
 
 func main() {
@@ -109,9 +109,6 @@ func main() {
 	file.Close()
 
 	contents := strings.Split(string(data), "\n")
-	fmt.Println(contents[0])
-	fmt.Println(contents[1])
-	fmt.Println(contents[2])
 
 	err = termbox.Init()
 	if err != nil {
