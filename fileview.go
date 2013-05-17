@@ -54,6 +54,7 @@ func show_text(text []string, first_line, first_column int) {
 		} else {
 			break
 		}
+		line = strings.Replace(line, "\t", "        ", -1)
 
 		for col := 1; col <= W; col++ {
 			nr_char := first_column + col - 1
